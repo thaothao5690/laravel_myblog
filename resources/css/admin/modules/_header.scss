@@ -1,0 +1,19 @@
+.header {
+    box-shadow: 0 -0.365rem 0.625rem 0.3125rem rgba(0, 0, 0, 0.5);
+    z-index: 100;
+
+    .logo {
+        max-width: 4.375rem;
+    }
+
+    .menu {
+        &-link {
+            color: grey;
+            text-transform: uppercase;
+            font-weight: bold;
+            &:hover {
+                color: $main-color;
+            }
+        }
+    }
+}
