@@ -2,7 +2,6 @@
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
@@ -14,12 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ratings', function (Blueprint $table) {
-            $table->id();
-            $table->integer('stars');
-            $table->timestamp('created_at')->default(DB::raw('CURRENT_TIMESTAMP'));
-            $table->timestamp('updated_at')->default(DB::raw('CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP'));
-            $table->unsignedBigInteger('user_id');
+        Schema::table('blogs', function (Blueprint $table) {
+            $table->dropForeign('blogs_author_foreign');
+            $table->renameColumn('author', 'user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
@@ -31,6 +27,10 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ratings');
+        Schema::table('blogs', function (Blueprint $table) {
+            $table->dropForeign('user_id');
+            $table->renameColumn('user_id', 'author');
+            $table->foreign('author')->references('id')->on('users')->onDelete('cascade');
+        });
     }
 };
