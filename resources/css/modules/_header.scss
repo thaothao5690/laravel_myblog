@@ -1,0 +1,71 @@
+.header {
+    flex-shrink: 0;
+    box-shadow: 0 -0.365rem 0.625rem 0.3125rem rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+    border: 0.1rem solid rgb(240, 217, 255);
+
+    .auth {
+        background-color: black;
+        color: white;
+        text-align: center;
+        .logout,
+        .login,
+        .register {
+            color: white;
+            &:hover {
+                color: rgb(240, 217, 255);
+            }
+        }
+
+        .login {
+            margin-right: 0.2rem;
+        }
+
+        .logout {
+            text-decoration: underline;
+            background-color: black;
+        }
+    }
+
+    .logo {
+        max-width: 4.375rem;
+        max-height: 4.375rem;
+        object-fit: cover;
+        margin-right: 2.5rem;
+    }
+
+    .slogan {
+        font-family: "Chivo Mono", monospace;
+        color: black;
+    }
+
+    .menu {
+        text-transform: uppercase;
+
+        &-item {
+            margin-right: 2rem;
+
+            &:last-child {
+                margin-right: 0;
+            }
+
+            .menu-link {
+                font-weight: 700;
+
+                &:hover {
+                    color: $main-color !important;
+                }
+            }
+
+            .dropdown-menu-item {
+                text-transform: capitalize;
+                padding: 0.5rem 0;
+            }
+        }
+    }
+}

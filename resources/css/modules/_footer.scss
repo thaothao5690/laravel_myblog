@@ -1,0 +1,63 @@
+.footer {
+    flex-shrink: 0;
+    padding: 4rem 0;
+    box-shadow: 0 0 0.25rem 0 rgba(0, 0, 0, 0.5);
+
+    .wrapper {
+        width: 100%;
+        margin: 0;
+
+        .brand {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0;
+
+            &-img {
+                max-height: 9.375rem;
+            }
+
+            .social-media {
+                font-size: 1rem;
+
+                .social-media-link {
+                    padding: 0.3rem 0.5rem;
+                    color: black;
+
+                    &:hover {
+                        background-color: $main-color;
+                        border-radius: 50%;
+                        color: white;
+                    }
+                }
+            }
+        }
+
+        .information {
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .brand-name {
+                color: $main-color;
+                margin-bottom: 2.5rem;
+                font-family: "Poppins", sans-serif;
+            }
+
+            .contact {
+                margin: 0;
+                padding: 0;
+
+                &-item {
+                    list-style-type: none;
+                    margin-bottom: 1.5rem;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}

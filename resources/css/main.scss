@@ -1,0 +1,106 @@
+@import "_variables";
+@import "_font.scss";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+html {
+    height: 100%;
+}
+
+body {
+    height: 100%;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+.active {
+    color: $main-color !important;
+}
+
+.btn {
+    &.btn-main {
+        text-align: center;
+        border: 0.07rem solid $main-color;
+        color: $main-color;
+
+        &:hover {
+            background-color: $main-color !important;
+            color: white;
+        }
+    }
+}
+
+.breadcrumb-wrapper {
+    margin: 3rem 0 1.5rem;
+
+    .breadcrumb-link {
+        color: $main-color;
+        font-weight: bold;
+        &:hover {
+            color: $green-color;
+        }
+
+        &.current-link {
+            text-decoration: none;
+            color: black;
+        }
+    }
+}
+
+.heading-title {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    border: 0.1rem dashed $main-color;
+}
+
+.form {
+    border: 0.1rem solid $green-color;
+    padding: 2rem;
+    background-color: white;
+
+    .label {
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+
+    .input {
+        font-size: 0.8rem;
+    }
+
+    .btns {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.pagination > li > a,
+.pagination > li > span {
+    color: $main-color;
+}
+
+.pagination > .active > a,
+.pagination > .active > a:focus,
+.pagination > .active > a:hover,
+.pagination > .active > span,
+.pagination > .active > span:focus,
+.pagination > .active > span:hover {
+    background-color: $main-color;
+    border-color: white;
+    color: white;
+}
+
+.pagination {
+    margin-bottom: 0;
+
+    .page-link:hover {
+        color: $main-color;
+    }
+}

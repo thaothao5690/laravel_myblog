@@ -1,0 +1,107 @@
+@import "main.scss";
+@import "_modules.scss";
+
+main.main {
+    flex: 1 0 auto;
+    padding: 5.5rem 0;
+}
+
+.cards {
+    display: flex;
+    margin-bottom: 0.5rem;
+    flex-wrap: wrap;
+
+    .card-item {
+        width: 33.3333%;
+        padding: 0 0.5rem 1rem;
+
+        .card {
+            overflow: hidden;
+            height: 100%;
+            &:last-child {
+                margin-right: 0;
+            }
+
+            &-img {
+                height: 12.5rem;
+                object-fit: cover;
+                transition: all 0.4s ease-in-out 0s;
+                margin-bottom: 0.5rem;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            &-content {
+                padding-top: 1rem;
+                padding-bottom: 1.5rem;
+
+                &-title {
+                    text-decoration: none;
+                    color: black;
+                    text-transform: uppercase;
+
+                    &:hover {
+                        color: $main-color;
+                    }
+
+                    .title {
+                        font-size: 1rem;
+                        margin-bottom: 1rem;
+                    }
+                }
+
+                &-text {
+                    font-size: 0.8rem;
+                    margin-bottom: 1.5rem;
+                }
+
+                &-status {
+                    font-size: 0.85rem;
+                    text-align: center;
+                    border: 0.05rem dashed $main-color;
+
+                    .approved,
+                    .rejected,
+                    .pending {
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
+                    .approved {
+                        color: green;
+                    }
+
+                    .rejected {
+                        color: red;
+                    }
+
+                    .pending {
+                        color: orange;
+                    }
+                }
+            }
+
+            .btns {
+                display: flex;
+
+                .btn-main {
+                    display: block;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.error-image {
+    display: flex;
+    justify-content: center;
+
+    img {
+        max-height: 13rem;
+        min-width: 15rem;
+        object-fit: cover;
+    }
+}

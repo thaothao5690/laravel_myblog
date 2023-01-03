@@ -1,0 +1,33 @@
+.contact-page {
+    .submit-button {
+        margin-bottom: 2rem;
+    }
+
+    .description {
+        font-family: "Chivo Mono", monospace;
+        margin-bottom: 0;
+        font-size: 1rem;
+    }
+
+    .inform-submitted {
+        text-align: center;
+        margin-bottom: 3rem;
+        text-transform: uppercase;
+    }
+
+    .information {
+        word-break: break-all;
+        margin-bottom: 2rem;
+
+        > p {
+            margin-bottom: 1rem;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .inform-thankyou {
+        margin-bottom: 0;
+    }
+}

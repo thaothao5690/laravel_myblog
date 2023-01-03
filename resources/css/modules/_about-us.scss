@@ -1,0 +1,46 @@
+.about-us-page {
+    .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
+
+        .name {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .slogan {
+            font-family: "Chivo Mono", monospace;
+        }
+    }
+
+    .content {
+        p {
+            font-family: "Poppins", sans-serif;
+        }
+
+        .link {
+            color: black;
+            &:hover {
+                color: $main-color;
+            }
+        }
+
+        .end {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+
+            .thanks {
+                p {
+                    margin-bottom: 0;
+                }
+
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    }
+}
